@@ -1,0 +1,97 @@
+import java.util.Scanner;
+
+public class uts_hadi {
+	
+	public static void main (String [] args) {
+		Scanner input = new Scanner (System.in);
+		Scanner scan = new Scanner (System.in);
+		String nama;
+		int pilih;
+		int resto;
+		int hrg, jml, total, bayar, kembali;
+        
+        System.out.println(" ======================================");
+        System.out.println(" |      Program Percabangan UTS       |");
+        System.out.println(" |         By : Hadi Mutaqin          |");
+        System.out.println(" |          NIM : 180101095           |");
+        System.out.println(" ======================================");
+        System.out.println();     
+        System.out.println(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println();
+						
+		System.out.println("\n ============= Pilihan Menu ============== ");
+		System.out.println(" | Pilihan 1 : Restoran                  |");
+		System.out.println(" | Pilihan 2 : Supermarket               |");
+		System.out.println(" | Pilihan 3 : Bonus                     |");
+		System.out.println(" ========================================= ");
+		
+		System.out.print(" Masukkan Pilihan 1 s.d 3 = ");
+		pilih = input.nextInt();
+	
+    switch (pilih)
+    {case 1:
+			System.out.println("\n Posisi Berada Pada Pilihann 1 Restoran");
+			System.out.print(" 1. Dine In\n");
+			System.out.print(" 2. Take Away\n");
+			
+			System.out.print("\n Masukkan Pilihan 1 s.d 2 = ");
+			resto = input.nextInt();
+			
+			if (resto == 1){
+				System.out.print("\n Dine In\n");
+			}
+			else if (resto == 2){
+				System.out.print("\n Take Away\n");
+			}
+			else{
+				System.out.print(" Masukkan pilihanmu dengan benar!");
+			}
+    break;
+        
+    case 2:
+			System.out.println("\n Posisi Berada Pada Pilihan 2 Supermarket");
+			System.out.print(" Nama Barang = ");
+			nama = scan.nextLine();
+			
+			System.out.print(" Harga Barang = ");
+			hrg = scan.nextInt();
+			
+			System.out.print(" Jumlah Barang = ");
+			jml = scan.nextInt();
+			
+			total = (hrg * jml);
+			
+            System.out.println("\n\n ====== Rincian Pembelian ====== ");
+            System.out.println(" ~> Nama Barang   : "+nama+" ");
+            System.out.println(" ~> Harga Barang  : Rp."+hrg+",- "); 
+            System.out.println(" ~> Jumlah Barang : "+jml+" " );
+            System.out.println(" ~> Total Belanja : Rp."+total+",- ");
+            System.out.println(" <=====> <~~~~~~~~~~~~~> <=====> \n");
+			
+			System.out.print(" Masukkan Uang Bayar : ");
+			bayar = scan.nextInt();
+			
+			kembali = (bayar-total);
+			System.out.print(" Uang Kembalian Anda : Rp."+kembali+",- \n");
+        
+		break;
+		
+		case 3:
+            System.out.println("\n Posisi Berada Pada Pilihan 3 Bonus\n");
+            
+			for (int i = 1; i <= 6; i++) { 
+                for (int j = i; j <= 5; j++) { 
+                System.out.print(" ");
+                }
+                for (int k = 0; k <= (i * 2) - 2; k++) { 
+                System.out.print("*");
+                }
+                System.out.println(); 
+                }
+        
+    break;
+		default:
+			System.out.println(" Pilihan hanya 1 s.d 3 bosque...");
+		}
+	}    
+}
